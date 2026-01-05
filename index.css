@@ -1,0 +1,53 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  max-width: fit-content;
+  margin: 40px auto;
+}
+
+form h1 {
+  text-align: center;
+}
+
+form fieldset {
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: -5px 5px 5px lightblue;
+}
+
+input:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.94);
+}
+
+button {
+  background-color: lightblue;
+  border: none;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkblue;
+}
+
+table {
+  font-family: arial, sans-serif;
+  width: 100%;
+  margin: 10px auto;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+  border-radius: 5px;
+}

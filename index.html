@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenses Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <form class="container">
+      <h1>Expenses Calculator</h1>
+
+      <div class="main">
+        <fieldset>
+          <input
+            id="inputName"
+            type="text"
+            name="name"
+            placeholder="Expense Name"
+            required
+          />
+
+          <input
+            id="inputAmount"
+            type="number"
+            name="name"
+            placeholder="Amount"
+            required
+          />
+
+          <select name="category" id="category">
+            <option value="food">Food</option>
+            <option value="transport">Transport</option>
+            <option value="shopping">Shoppping</option>
+          </select>
+
+          <input
+            id="inputDate"
+            type="date"
+            name="name"
+            placeholder="Date"
+            required
+          />
+
+          <button>Submit</button>
+
+          <div class="data-display">
+            <table>
+              <tr>
+                <th>Expense Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+              </tr>
+            </table>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
