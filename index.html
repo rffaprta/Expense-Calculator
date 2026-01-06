@@ -31,7 +31,7 @@
           <select name="category" id="category">
             <option value="food">Food</option>
             <option value="transport">Transport</option>
-            <option value="shopping">Shoppping</option>
+            <option value="shopping">Shopping</option>
           </select>
 
           <input
@@ -46,12 +46,16 @@
 
           <div class="data-display">
             <table>
-              <tr>
-                <th>Expense Name</th>
-                <th>Amount</th>
-                <th>Category</th>
-                <th>Date</th>
-              </tr>
+              <thead>
+                <tr>
+                  <th>Expense Name</th>
+                  <th>Amount</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                </tr>
+              </thead>
+
+              <tbody id="expenses-list"></tbody>
             </table>
           </div>
         </fieldset>
