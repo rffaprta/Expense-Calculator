@@ -1,16 +1,25 @@
 let data = [];
 
-$(document).ready(function () {
-  $("button").click(function (e) {
-    e.preventDefault();
-    const inputValue = $("#itemInput").val();
-    if (inputValue.trim() !== "") {
-      data.push(inputValue);
+$("button").click(function (e) {
+  e.preventDefault();
 
-      inputValue.value = "";
-    } else {
-      alert("Please enter an item.");
-    }
-    console.log(data);
-  });
+  // Variable
+  const inputName = $("#itemName").val();
+  const inputNumber = $("#itemNumber").val();
+  const inputCategory = $("#itemCategory").val();
+  const inputDate = $("#itemDate").val();
+
+  // Object
+  const dataInput = { inputName, inputNumber, inputCategory, inputDate };
+
+  if (dataInput !== "") {
+    data.push(dataInput);
+  } else {
+    alert("Please enter an item.");
+  }
+  $("#itemName").val("");
+  $("#itemNumber").val("");
+  $("#itemCategory").val("");
+  $("#itemDate").val("");
+  console.log(data);
 });
