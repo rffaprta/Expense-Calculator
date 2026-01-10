@@ -42,7 +42,7 @@ $("button").click(function (e) {
   }
 
   // let totalPlacement = $(".total");
-  const totalPlacement = `<h1>${total}</h1>`;
+  const totalPlacement = `<h3>Rp. ${total}</h3>`;
   $(".total").html(totalPlacement);
 
   // console.log(data);
