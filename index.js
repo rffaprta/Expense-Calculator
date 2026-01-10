@@ -21,5 +21,29 @@ $("button").click(function (e) {
   $("#itemNumber").val("");
   $("#itemCategory").val("");
   $("#itemDate").val("");
-  console.log(data);
+
+  //Tempel Data
+  const barisBaru = `
+    <tr>
+        <td>${inputName}</td>
+        <td>${inputNumber}</td>
+        <td>${inputCategory}</td>
+        <td>${inputDate}</td>
+    </tr>
+`;
+  $("#expensesList").append(barisBaru);
+
+  // Amount Total
+  let total = 0;
+
+  for (i = 0; i < data.length; i++) {
+    total += Number(data[i].inputNumber);
+    console.log(total);
+  }
+
+  // let totalPlacement = $(".total");
+  const totalPlacement = `<h1>${total}</h1>`;
+  $(".total").html(totalPlacement);
+
+  // console.log(data);
 });
