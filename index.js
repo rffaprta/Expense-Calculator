@@ -26,7 +26,7 @@ $("button").click(function (e) {
   const barisBaru = `
     <tr>
         <td>${inputName}</td>
-        <td>${inputNumber}</td>
+        <td>Rp. ${inputNumber}</td>
         <td>${inputCategory}</td>
         <td>${inputDate}</td>
     </tr>

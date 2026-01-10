@@ -47,18 +47,32 @@ table {
   font-family: arial, sans-serif;
   width: 100%;
   margin: 10px auto;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #333;
+  color: white;
+}
+
+tr th {
+  font-weight: bold;
 }
 
 td,
 th {
-  border: 1px solid #dddddd;
+  border: 1px solid black;
   text-align: left;
-  padding: 5px;
-  border-radius: 5px;
+  padding: 8px;
+}
+
+tr td:first-child {
+  background-color: orange;
 }
 
 thead th {
   text-align: center;
+  width: 25%;
 }
 
 .total {
@@ -66,7 +80,6 @@ thead th {
   height: 30px;
   border: 2px solid black;
   border-radius: 10px;
-  opacity: 0.5;
   text-align: center;
   padding: 5px;
 }
