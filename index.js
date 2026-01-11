@@ -1,4 +1,11 @@
 let data = [];
+// Load
+let fromSaveData = localStorage.getItem("listData");
+
+if (fromSaveData) {
+  data = JSON.parse(fromSaveData);
+  console.log("Data is found, ready to view!");
+}
 
 $("button").click(function (e) {
   e.preventDefault();
@@ -23,7 +30,8 @@ $("button").click(function (e) {
   $("#itemDate").val("");
 
   //Tempel Data
-  const barisBaru = `
+  function jaitData() {
+    const barisBaru = `
     <tr>
         <td>${inputName}</td>
         <td>Rp. ${inputNumber}</td>
@@ -31,19 +39,29 @@ $("button").click(function (e) {
         <td>${inputDate}</td>
     </tr>
 `;
-  $("#expensesList").append(barisBaru);
+    $("#expensesList").append(barisBaru);
+  }
+  jaitData();
 
   // Amount Total
-  let total = 0;
+  function total() {
+    let total = 0;
 
-  for (i = 0; i < data.length; i++) {
-    total += Number(data[i].inputNumber);
-    console.log(total);
+    for (i = 0; i < data.length; i++) {
+      total += Number(data[i].inputNumber);
+      console.log(total);
+    }
+
+    // let totalPlacement = $(".total");
+    const totalPlacement = `<h3>Rp. ${total}</h3>`;
+    $(".total").html(totalPlacement);
   }
+  total();
 
-  // let totalPlacement = $(".total");
-  const totalPlacement = `<h3>Rp. ${total}</h3>`;
-  $(".total").html(totalPlacement);
+  // Local Storage
+  const saveData = JSON.stringify(data);
+  // Saving
+  localStorage.setItem("listData", saveData);
 
   // console.log(data);
 });
